@@ -17,6 +17,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, CLLocationMan
     var locationManager: CLLocationManager!
     var currentUserLocation: Location!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +43,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, CLLocationMan
         searchButton.layer.shadowOpacity = 0.5
         
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let locationViewController = segue.destination as? LocationViewController {
+            locationViewController.pickUpLocation = currentUserLocation
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
