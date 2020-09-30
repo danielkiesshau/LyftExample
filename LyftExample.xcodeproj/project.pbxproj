@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		02D99DDD2523E16200E61C1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D99DDC2523E16200E61C1A /* AppDelegate.swift */; };
 		02D99DDF2523E16200E61C1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D99DDE2523E16200E61C1A /* SceneDelegate.swift */; };
-		02D99DE12523E16200E61C1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D99DE02523E16200E61C1A /* ViewController.swift */; };
 		02D99DE42523E16200E61C1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D99DE22523E16200E61C1A /* Main.storyboard */; };
 		02D99DE62523E16200E61C1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D99DE52523E16200E61C1A /* Assets.xcassets */; };
 		02D99DE92523E16200E61C1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D99DE72523E16200E61C1A /* LaunchScreen.storyboard */; };
+		02D99DF72523E1FB00E61C1A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D99DF62523E1FB00E61C1A /* Location.swift */; };
+		02D99DFB2523E2C600E61C1A /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D99DFA2523E2C600E61C1A /* LocationService.swift */; };
+		02D99E002523E35100E61C1A /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 02D99DFF2523E35100E61C1A /* locations.json */; };
+		02D99E0E2523F2BA00E61C1A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D99E0D2523F2BA00E61C1A /* HomeViewController.swift */; };
+		02D99E112523F5C200E61C1A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D99E102523F5C200E61C1A /* LocationCell.swift */; };
+		02D99E14252402DB00E61C1A /* VehicleAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D99E13252402DB00E61C1A /* VehicleAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02D99DD92523E16200E61C1A /* LyftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D99DDC2523E16200E61C1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02D99DDE2523E16200E61C1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		02D99DE02523E16200E61C1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		02D99DE32523E16200E61C1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02D99DE52523E16200E61C1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02D99DE82523E16200E61C1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02D99DEA2523E16200E61C1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02D99DF62523E1FB00E61C1A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		02D99DFA2523E2C600E61C1A /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		02D99DFF2523E35100E61C1A /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		02D99E0D2523F2BA00E61C1A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		02D99E102523F5C200E61C1A /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		02D99E13252402DB00E61C1A /* VehicleAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,68 @@
 		02D99DDB2523E16200E61C1A /* LyftExample */ = {
 			isa = PBXGroup;
 			children = (
-				02D99DDC2523E16200E61C1A /* AppDelegate.swift */,
-				02D99DDE2523E16200E61C1A /* SceneDelegate.swift */,
-				02D99DE02523E16200E61C1A /* ViewController.swift */,
-				02D99DE22523E16200E61C1A /* Main.storyboard */,
-				02D99DE52523E16200E61C1A /* Assets.xcassets */,
-				02D99DE72523E16200E61C1A /* LaunchScreen.storyboard */,
+				02D99DF22523E17100E61C1A /* Model */,
+				02D99DF12523E16700E61C1A /* View */,
+				02D99DF32523E17500E61C1A /* Controller */,
+				02D99DF42523E18400E61C1A /* Supporting Files */,
 				02D99DEA2523E16200E61C1A /* Info.plist */,
+				02D99DE52523E16200E61C1A /* Assets.xcassets */,
 			);
 			path = LyftExample;
+			sourceTree = "<group>";
+		};
+		02D99DF12523E16700E61C1A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02D99DE22523E16200E61C1A /* Main.storyboard */,
+				02D99DE72523E16200E61C1A /* LaunchScreen.storyboard */,
+				02D99E102523F5C200E61C1A /* LocationCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		02D99DF22523E17100E61C1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02D99DF92523E2B400E61C1A /* Services */,
+				02D99DF62523E1FB00E61C1A /* Location.swift */,
+				02D99E13252402DB00E61C1A /* VehicleAnnotation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		02D99DF32523E17500E61C1A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				02D99E0D2523F2BA00E61C1A /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		02D99DF42523E18400E61C1A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02D99DFE2523E35100E61C1A /* Data */,
+				02D99DDC2523E16200E61C1A /* AppDelegate.swift */,
+				02D99DDE2523E16200E61C1A /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		02D99DF92523E2B400E61C1A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				02D99DFA2523E2C600E61C1A /* LocationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		02D99DFE2523E35100E61C1A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				02D99DFF2523E35100E61C1A /* locations.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +189,7 @@
 			files = (
 				02D99DE92523E16200E61C1A /* LaunchScreen.storyboard in Resources */,
 				02D99DE62523E16200E61C1A /* Assets.xcassets in Resources */,
+				02D99E002523E35100E61C1A /* locations.json in Resources */,
 				02D99DE42523E16200E61C1A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +201,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02D99DE12523E16200E61C1A /* ViewController.swift in Sources */,
+				02D99E112523F5C200E61C1A /* LocationCell.swift in Sources */,
+				02D99E0E2523F2BA00E61C1A /* HomeViewController.swift in Sources */,
 				02D99DDD2523E16200E61C1A /* AppDelegate.swift in Sources */,
+				02D99DFB2523E2C600E61C1A /* LocationService.swift in Sources */,
+				02D99E14252402DB00E61C1A /* VehicleAnnotation.swift in Sources */,
+				02D99DF72523E1FB00E61C1A /* Location.swift in Sources */,
 				02D99DDF2523E16200E61C1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
