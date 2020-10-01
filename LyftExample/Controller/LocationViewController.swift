@@ -11,7 +11,7 @@ import MapKit
 class LocationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, MKLocalSearchCompleterDelegate {
     var locations = [Location]()
     var pickUpLocation: Location?
-    var dropOffLocations: Location?
+    var dropOffLocation: Location?
     var searchCompleter = MKLocalSearchCompleter()
     var searchResult = [MKLocalSearchCompletion]()
 
@@ -53,6 +53,12 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        dropOffLocation = locations[indexPath.row]
+        
+        performSegue(withIdentifier: "RouteSegue", sender: dropOffLocation)
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let latestString = (textField.text! as NSString).replacingCharacters(in: range, with: string)
         
@@ -66,6 +72,13 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
         searchResult = completer.results
         tableView.reloadData()
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let routeViewController = segue.destination as? RouteViewController, let dropOffLocation = sender as? Location {
+            routeViewController.dropOffLocation = dropOffLocation
+            routeViewController.pickupLocation = pickUpLocation
+        }
     }
      
 }

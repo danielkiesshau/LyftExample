@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class HomeViewController: UIViewController, UITableViewDataSource, CLLocationManagerDelegate, MKMapViewDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource, CLLocationManagerDelegate, MKMapViewDelegate, UITableViewDelegate {
   
     
     @IBOutlet weak var searchButton: UIButton!
@@ -48,6 +48,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, CLLocationMan
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let locationViewController = segue.destination as? LocationViewController {
             locationViewController.pickUpLocation = currentUserLocation
+        } else if let routeViewController = segue.destination as? RouteViewController,
+                  let dropOffLocation = sender as? Location{
+            routeViewController.pickupLocation = currentUserLocation
+            routeViewController.dropOffLocation = dropOffLocation 
         }
     }
     
@@ -66,6 +70,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, CLLocationMan
         cell.update(location: location)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dropOffLocation = recentLocations[indexPath.row]
+        
+        performSegue(withIdentifier: "RouteSegue", sender: dropOffLocation)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

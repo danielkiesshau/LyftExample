@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0210A9FC2524E3F7000E87E9 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210A9FB2524E3F7000E87E9 /* LocationViewController.swift */; };
+		02CDA46A25253E6500D2313B /* RideQuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CDA46925253E6500D2313B /* RideQuoteCell.swift */; };
+		02CDA46D25253F4B00D2313B /* RideQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CDA46C25253F4B00D2313B /* RideQuote.swift */; };
+		02CDA4702525409800D2313B /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CDA46F2525409800D2313B /* RouteViewController.swift */; };
+		02CDA4732525422700D2313B /* RideQuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CDA4722525422700D2313B /* RideQuoteService.swift */; };
+		02CDA47625254B3400D2313B /* LocationAnnotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CDA47525254B3400D2313B /* LocationAnnotion.swift */; };
 		02D99DDD2523E16200E61C1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D99DDC2523E16200E61C1A /* AppDelegate.swift */; };
 		02D99DDF2523E16200E61C1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D99DDE2523E16200E61C1A /* SceneDelegate.swift */; };
 		02D99DE42523E16200E61C1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D99DE22523E16200E61C1A /* Main.storyboard */; };
@@ -23,6 +28,11 @@
 
 /* Begin PBXFileReference section */
 		0210A9FB2524E3F7000E87E9 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		02CDA46925253E6500D2313B /* RideQuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideQuoteCell.swift; sourceTree = "<group>"; };
+		02CDA46C25253F4B00D2313B /* RideQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideQuote.swift; sourceTree = "<group>"; };
+		02CDA46F2525409800D2313B /* RouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		02CDA4722525422700D2313B /* RideQuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideQuoteService.swift; sourceTree = "<group>"; };
+		02CDA47525254B3400D2313B /* LocationAnnotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnnotion.swift; sourceTree = "<group>"; };
 		02D99DD92523E16200E61C1A /* LyftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D99DDC2523E16200E61C1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02D99DDE2523E16200E61C1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +94,7 @@
 				02D99DE22523E16200E61C1A /* Main.storyboard */,
 				02D99DE72523E16200E61C1A /* LaunchScreen.storyboard */,
 				02D99E102523F5C200E61C1A /* LocationCell.swift */,
+				02CDA46925253E6500D2313B /* RideQuoteCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -94,6 +105,8 @@
 				02D99DF92523E2B400E61C1A /* Services */,
 				02D99DF62523E1FB00E61C1A /* Location.swift */,
 				02D99E13252402DB00E61C1A /* VehicleAnnotation.swift */,
+				02CDA46C25253F4B00D2313B /* RideQuote.swift */,
+				02CDA47525254B3400D2313B /* LocationAnnotion.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,6 +116,7 @@
 			children = (
 				02D99E0D2523F2BA00E61C1A /* HomeViewController.swift */,
 				0210A9FB2524E3F7000E87E9 /* LocationViewController.swift */,
+				02CDA46F2525409800D2313B /* RouteViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				02D99DFA2523E2C600E61C1A /* LocationService.swift */,
+				02CDA4722525422700D2313B /* RideQuoteService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -204,13 +219,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02CDA4732525422700D2313B /* RideQuoteService.swift in Sources */,
+				02CDA47625254B3400D2313B /* LocationAnnotion.swift in Sources */,
 				02D99E112523F5C200E61C1A /* LocationCell.swift in Sources */,
 				02D99E0E2523F2BA00E61C1A /* HomeViewController.swift in Sources */,
+				02CDA4702525409800D2313B /* RouteViewController.swift in Sources */,
 				02D99DDD2523E16200E61C1A /* AppDelegate.swift in Sources */,
 				02D99DFB2523E2C600E61C1A /* LocationService.swift in Sources */,
 				02D99E14252402DB00E61C1A /* VehicleAnnotation.swift in Sources */,
+				02CDA46A25253E6500D2313B /* RideQuoteCell.swift in Sources */,
 				02D99DF72523E1FB00E61C1A /* Location.swift in Sources */,
 				02D99DDF2523E16200E61C1A /* SceneDelegate.swift in Sources */,
+				02CDA46D25253F4B00D2313B /* RideQuote.swift in Sources */,
 				0210A9FC2524E3F7000E87E9 /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
