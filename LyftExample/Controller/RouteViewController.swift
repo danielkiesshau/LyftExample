@@ -20,7 +20,7 @@ class RouteViewController: UIViewController, UITableViewDataSource, UITableViewD
     var pickupLocation: Location!
     var dropOffLocation: Location!
     var rideQuotes = [RideQuote]()
-    var selectedIndex = 1
+    var selectedIndex = 0
     
     override func viewDidLoad() {
         
@@ -132,6 +132,13 @@ class RouteViewController: UIViewController, UITableViewDataSource, UITableViewD
         renderer.lineWidth = 5.0
         renderer.strokeColor = UIColor(red: 247.0/255.0, green: 66.0/255.0, blue: 190.0/255.0, alpha: 1)
         return renderer
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let driverViewController = segue.destination as? DriverViewController {
+            driverViewController.pickUpLocation = pickupLocation
+            driverViewController.dropOffLocation = dropOffLocation
+        }
     }
     
 }
