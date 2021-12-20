@@ -1,5 +1,8 @@
 
 # Lyft clone Example with Swift
+
+[Udemy Certificate](https://www.udemy.com/certificate/UC-9326bf85-8fb7-4c2d-86df-6dbe01c8d2ee/)
+
 ## Gif of the app
 <img src="lyft-play.gif" height="450"/>
 
